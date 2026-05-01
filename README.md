@@ -8,4 +8,4 @@ To understand what is **Spatial**, **Spectral** and **Temporal** Images In Satel
 https://cimss.ssec.wisc.edu/sage/remote_sensing/lesson3/spectral.htm <br>
 U-Net++: https://www.geeksforgeeks.org/machine-learning/unet-architecture-explained/ <br>
 If you want to try using CUDA libraries in windows: Conda Lib: https://docs.conda.io/projects/conda/en/stable/user-guide/install/windows.html <br>
-**Colab link: ** https://colab.research.google.com/drive/1-xnD2vlpM_5g8BJgEFaCSFvYT_JfhbF0?usp=sharing 
+**Colab link:** https://colab.research.google.com/drive/1-xnD2vlpM_5g8BJgEFaCSFvYT_JfhbF0?usp=sharing 
