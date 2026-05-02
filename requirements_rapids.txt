@@ -1,0 +1,7 @@
+# Install with:
+# pip install --extra-index-url=https://pypi.nvidia.com -r requirements_rapids.txt
+cudf-cu11
+cuml-cu11
+cucim
+dask-cuda
+

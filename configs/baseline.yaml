@@ -1,0 +1,50 @@
+seed: 42
+device: cuda
+
+paths:
+  results_dir: results/baseline
+  best_checkpoint_name: siamese_baseline_best.pth
+  history_prefix: baseline
+
+data:
+  root: /content/levir_data
+  crop_size: 256
+  eval_crop_size: 256
+  num_workers: 2
+  use_cucim: false
+
+model:
+  name: siamese_unet
+  embed_dim: 64
+  use_change_head: false
+
+loss:
+  name: contrastive
+  margin: 2.0
+
+optimizer:
+  lr: 0.001
+  weight_decay: 0.0001
+
+scheduler:
+  name: cosine
+  t_max: 30
+  eta_min: 0.00001
+
+training:
+  epochs: 30
+  batch_size: 8
+  grad_clip: 1.0
+  freeze_backbone_epochs: 0
+
+evaluation:
+  threshold: 1.0
+  threshold_sweep_start: 0.1
+  threshold_sweep_end: 3.0
+  threshold_sweep_steps: 50
+
+inference:
+  threshold: 1.0
+  tile_size: 256
+  overlap: 128
+

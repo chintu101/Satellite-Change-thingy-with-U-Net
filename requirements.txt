@@ -1,0 +1,31 @@
+# Deep learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Data handling
+numpy>=1.24.0
+Pillow>=9.5.0
+pandas>=2.0.0
+
+# Visualisation
+matplotlib>=3.7.0
+
+# ML utilities
+scikit-learn>=1.2.0
+scikit-image>=0.20.0
+opencv-python-headless>=4.7.0
+
+# Experiment tracking
+tensorboard>=2.13.0
+tqdm>=4.65.0
+
+# Config
+pyyaml>=6.0
+
+# Dataset download
+kaggle>=1.5.13
+
+# Distributed computing
+dask>=2023.5.0
+distributed>=2023.5.0
+

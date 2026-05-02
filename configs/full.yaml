@@ -1,0 +1,54 @@
+seed: 42
+device: cuda
+
+paths:
+  results_dir: results/full
+  best_checkpoint_name: siamese_cbam_best.pth
+  history_prefix: full
+
+data:
+  root: /content/levir_data
+  crop_size: 256
+  eval_crop_size: 256
+  num_workers: 2
+  use_cucim: true
+
+model:
+  name: siamese_resnet
+  embed_dim: 64
+  pretrained: true
+  use_cbam: true
+
+loss:
+  name: bce_dice
+  bce_weight: 0.4
+  dice_weight: 0.6
+  smooth: 0.000001
+
+optimizer:
+  backbone_lr: 0.0001
+  decoder_lr: 0.001
+  weight_decay: 0.0001
+
+scheduler:
+  name: cosine
+  t_max: 30
+  eta_min: 0.00001
+
+training:
+  epochs: 30
+  batch_size: 8
+  grad_clip: 1.0
+  freeze_backbone_epochs: 5
+
+evaluation:
+  threshold: 0.5
+  threshold_sweep_start: 0.1
+  threshold_sweep_end: 3.0
+  threshold_sweep_steps: 50
+
+inference:
+  threshold: 0.5
+  tile_size: 256
+  overlap: 128
+

@@ -1,0 +1,2 @@
+"""Satellite change detection package."""
+
